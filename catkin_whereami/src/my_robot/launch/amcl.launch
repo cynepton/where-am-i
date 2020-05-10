@@ -9,8 +9,8 @@
   <!--launch map_server node-->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
   
-  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
-      args="0 0 0 0 0 0 map odom 100"/>
+  <!--node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+      args="0 0 0 0 0 0 map odom 100"/-->
 
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
@@ -26,6 +26,25 @@
     <!-- initial robot position -->
     <param name="initial_pose_x" value="0"/>
     <param name="initial_pose_y" value="0"/>
+
+    <!-- Parameters   http://wiki.ros.org/amcl/#Parameters -->
+    <param name="transform_tolerance" value="0.2"/>
+    <param name="min_particles" value="100"/>
+    <param name="max_particles" value="1000"/>
+    <param name="initial_pose_a" value="-1.5707"/>
+    <param name="update_min_a" value="pi/6.0"/>
+    <param name="update_min_d" value="0.1"/>
+    <param name="tf_broadcast" value="true"/>
+    <param name="laser_min_range" value="0.1"/>
+    <param name="laser_max_range" value="10"/>
+    <param name="laser_max_beams" value="30"/>
+    <param name="laser_z_hit" value="0.95"/>
+    <param name="laser_z_rand" value="0.05"/>
+    <param name="odom_alpha1" value="0.02"/>
+    <param name="odom_alpha2" value="0.02"/>
+    <param name="odom_alpha3" value="0.02"/>
+    <param name="odom_alpha4" value="0.02"/>
+    <param name="odom_alpha5" value="0.02"/>
   </node>
 
 
