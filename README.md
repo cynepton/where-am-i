@@ -41,6 +41,17 @@ catkin_init_workspace
 catkin_make
 ```
 
+## CLone the Repository
+Clone the repository into the src folder of your catkin workspace
+```
+git clone -b master https://github.com/cynepton/where-am-i.git
+```
+## Launch the World file
+This automatically launches all other files, by passing a 2D Nav Goal to the robot using rviz, the robot automatically maps itself within the environment
+```
+roslaunch my_robot world.launch
+```
+
 ### Simulation Setup 
 The files from the [Go Chase it](https://github.com/cynepton/go-chase-it) project are used as a base for this one, specifically the [my_robot](https://github.com/cynepton/go-chase-it/tree/master/my_robot) package.`
 
