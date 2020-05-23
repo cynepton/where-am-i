@@ -20,7 +20,6 @@ sudo apt-get install ros-kinetic-move-base
 sudo apt-get install ros-kinetic-amcl
 ```
 
-## Project Build Process
 ### Catkin Workspace
 To program the robot, you will need to interface it with different ROS packages. Some of these packages are official ROS packages which offer great tools and others are packages that you’ll create. The goal of this section is to prepare and build your `catkin workspace`.
 
@@ -51,6 +50,8 @@ This automatically launches all other files, by passing a 2D Nav Goal to the rob
 ```
 roslaunch my_robot world.launch
 ```
+
+## Project Build Process
 
 ### Simulation Setup 
 The files from the [Go Chase it](https://github.com/cynepton/go-chase-it) project are used as a base for this one, specifically the [my_robot](https://github.com/cynepton/go-chase-it/tree/master/my_robot) package.`
